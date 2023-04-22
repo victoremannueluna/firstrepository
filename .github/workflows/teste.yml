@@ -1,16 +1,17 @@
-name: "Victor"
+name: "teste"
 
-on: #definir em que momento disparar a action
+on: #definir em que momento disparar o action
   push: #acao que dispara a action
-    branches: [ "main" ]
-			
+    branches: #nome da branche que recebe o push para disparar  action
+      - main
+      
 jobs: #diretriz para executar as tarefas do workflow
   teste: #nome do job
     runs-on: ubuntu-latest #escolher a vm para rodar
-		
+    
     steps:
       - name: Checkout
-	uses: action/checkout@v3.5.2
-			  
+        uses: actions/checkout@v3.5.2
+      
       - name: Print na tela
-	run: echo "Great times are coming"
+        run: echo "Hello World"
