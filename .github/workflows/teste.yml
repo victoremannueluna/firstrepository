@@ -2,8 +2,7 @@ name: "Victor"
 
 on: #definir em que momento disparar a action
   push: #acao que dispara a action
-    branches: #nome da branche que recebe o push para disparar action"
-      - main
+    branches: [ "main" ]
 			
 jobs: #diretriz para executar as tarefas do workflow
   teste: #nome do job
